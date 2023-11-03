@@ -6,8 +6,7 @@ database_name = 'testDatabase'
 client = pymongo.MongoClient(mongo_url)
 
 db = client[database_name]
-collection = db['freelancer-20231028']
-
+collection = db['freelancer-20231102']
 
 """
 data structure
@@ -26,6 +25,6 @@ def upload_data(data : dict):
     # data["date"] = date
     # data["time"] = time
     inserted_document = collection.insert_one(data)
-    print(f"Inserted document ID: {inserted_document.inserted_id}")
+    # print(f"Inserted document ID: {inserted_document.inserted_id}")
     
     

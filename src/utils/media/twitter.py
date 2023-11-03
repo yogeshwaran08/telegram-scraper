@@ -1,5 +1,6 @@
 import tweepy
-from ...configs import api_keys
+# from ...configs import api_keys
+from src.configs import api_keys
 
 auth = tweepy.OAuthHandler(api_keys.twitter_bot["consumer_key"], api_keys.twitter_bot["consumer_secret"])
 auth.set_access_token(api_keys.twitter_bot["access_token"], api_keys.twitter_bot["access_token_secret"])

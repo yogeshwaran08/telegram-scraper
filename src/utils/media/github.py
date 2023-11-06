@@ -14,7 +14,7 @@ def github_email_harvesting(username):
     else:
         # print(f"GitHub user {username} not found or the API request failed.")
         return None
-        
+        1
         
 def github_validater(uname):
     link = f"https://github.com/{uname}"

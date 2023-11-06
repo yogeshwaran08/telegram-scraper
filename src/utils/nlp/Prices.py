@@ -19,7 +19,7 @@ class Prices:
                 return res,currency
             else:
                 return []
-            
+
     def extract_price(self,arr):
         res = []
         for i in arr:

@@ -6,7 +6,7 @@ database_name = 'testDatabase'
 client = pymongo.MongoClient(mongo_url)
 
 db = client[database_name]
-collection = db['freelancer-20231102']
+collection = db['freelancer-20231106']
 
 """
 data structure

@@ -16,10 +16,10 @@ api_hash = api_keys["TELEGRAM_API"]["API_HASH"]
 session_name = "development_session"
 
 # Replace with your own phone number and session file name
-phone_number = '+917305127415'
+phone_number = '+919626067415'
 
 # Initialize the Telegram client
-client = TelegramClient(session_name, api_id, api_hash)
+client = TelegramClient(phone_number, api_id, api_hash)
 
 async def main():
     total_messges = 2000
@@ -33,8 +33,7 @@ async def main():
     # Replace 'chat' with the name or username of the chat you want to scrape
     chat = await client.get_input_entity(-1001273446931)
 
-    # Retrieve the last 500 messages from the chat
-    messages = await client.get_messages(chat, limit=2000)
+    messages = await client.get_messages(chat, limit=1000)
     messages = client.iter_messages(chat, limit=2000)
     print("NoOfMsgScrapedParsed\tNoOfMsgUplodedToDB\tSuccess\tFailures\tTime\tTotal")
     
@@ -70,7 +69,8 @@ async def main():
                 "Telegram" : telegram_link,
                 "Freelancer" : freelancer_link,
                 "Twitter" : twitter_link,
-                "Post_url" : post_url               
+                "Post_url" : post_url,    
+                "Group_name" : "Freelancer",           
             }
             upload_data(data=data)
             uploaded_to_database += 1
